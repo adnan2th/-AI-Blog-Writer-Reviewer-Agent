@@ -24,7 +24,7 @@ st.write("Multi-Agent Blog Generation using Groq + AutoGen")
 # Groq Configuration
 # -------------------------
 # 1. Try pulling from system environment (GitHub Actions / Local Env)
-api_key = os.environ.get("GROQ_API_KEY")
+api_key = os.environ.get("groq_api")
 
 # 2. Try pulling from Streamlit Secrets (If deployed on Streamlit Cloud)
 if not api_key and "GROQ_API_KEY" in st.secrets:
