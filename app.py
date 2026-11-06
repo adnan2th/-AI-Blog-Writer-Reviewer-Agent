@@ -3,9 +3,10 @@ import os
 import streamlit as st
 import autogen
 from dotenv import load_dotenv
+from groq import Groq
 
 #load_dotenv()
-
+#client = Groq() 
 # -------------------------
 # Streamlit UI
 # -------------------------
@@ -23,7 +24,7 @@ st.write("Multi-Agent Blog Generation using Groq + AutoGen")
 # Groq Configuration
 # -------------------------
 
-api_key = os.environ.get("MY_API_KEY")
+api_key = os.environ.get("GROQ_API_KEY")
 
 if not api_key:
     st.error("Groq API key missing in .env")
