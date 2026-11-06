@@ -23,7 +23,7 @@ st.write("Multi-Agent Blog Generation using Groq + AutoGen")
 # Groq Configuration
 # -------------------------
 
-api_key = os.environ.get("groq_api")
+api_key = os.environ.get("GROQ_API")
 
 if not api_key:
     st.error("Groq API key missing in .env")
