@@ -4,7 +4,7 @@ import streamlit as st
 import autogen
 from dotenv import load_dotenv
 
-load_dotenv()
+#load_dotenv()
 
 # -------------------------
 # Streamlit UI
