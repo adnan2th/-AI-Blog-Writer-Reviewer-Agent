@@ -26,25 +26,7 @@ st.write("Multi-Agent Blog Generation using Groq + AutoGen")
 # 1. Try pulling from system environment (GitHub Actions / Local Env)
 api_key = os.environ.get("groq_api")
 
-# 2. Try pulling from Streamlit Secrets (If deployed on Streamlit Cloud)
-if not api_key and "GROQ_API_KEY" in st.secrets:
-    api_key = st.secrets["GROQ_API_KEY"]
 
-# 3. Try pulling from local .env (For local development fallback)
-if not api_key:
-    load_dotenv()
-    api_key = os.getenv("GROQ_API_KEY")
-
-# Final verification check
-if not api_key:
-    st.error("Groq API key missing! Please set GROQ_API_KEY in your Environment, Streamlit Secrets, or .env file.")
-    st.stop()
-
-#api_key = os.environ.get("GROQ_API_KEY")
-
-if not api_key:
-    st.error("Groq API key missing in .env")
-    st.stop()
 
 llm_config = {
     "config_list": [
