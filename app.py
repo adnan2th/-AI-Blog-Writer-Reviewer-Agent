@@ -33,7 +33,7 @@ llm_config = {
     "config_list": [
         {
             "model": "openai/gpt-oss-20b",
-            "api_key": api_key,
+            "api_key": GROQ_API,
             "base_url": "https://api.groq.com/openai/v1",
         }
     ]
