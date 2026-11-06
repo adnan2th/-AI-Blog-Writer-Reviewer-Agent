@@ -23,7 +23,7 @@ st.write("Multi-Agent Blog Generation using Groq + AutoGen")
 # Groq Configuration
 # -------------------------
 
-api_key = os.environ.get("GROQ_API")
+api_key = os.environ.get("MY_API_KEY")
 
 if not api_key:
     st.error("Groq API key missing in .env")
@@ -33,7 +33,7 @@ llm_config = {
     "config_list": [
         {
             "model": "openai/gpt-oss-20b",
-            "api_key": GROQ_API,
+            "api_key": api_key,
             "base_url": "https://api.groq.com/openai/v1",
         }
     ]
